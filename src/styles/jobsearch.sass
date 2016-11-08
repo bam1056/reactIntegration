@@ -1,0 +1,82 @@
+//***** Fonts *****
+$base-text-size: 16px
+$base-font-family: sans-serif
+$body-font: 'Open Sans', sans-serif
+$important-font: 'Roboto', sans-serif
+
+
+// ***** Colors *****
+
+$body-color: #333333
+$trello-color: #D29034
+$blue-shadow: rgba(0, 300, 300, 0.3)
+$standard-box-shadow: rgba(0, 0, 0, 0.3)
+
+//        ***** Page Styling ******
+
+select
+  font:
+    family: $body-font
+    weight: bold
+    size: .8em
+  width: 8em
+
+.CardContainer
+  background-color: #E2E4E6
+  border-radius: 4px
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+  display: flex
+  flex-direction: column
+  margin: 10px
+  font-family: $body-font
+
+.CardContainer a
+  padding-right: 1em
+
+.CardContainer ul
+  background-color: white
+  border-radius: 10px
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+  font-family: $body-font
+  list-style: none
+  margin: 13px
+  width: 275px
+  z-index: 20
+
+.Main-Button-Container
+  display: flex
+  align-items: center
+  flex-direction: column
+  border: 3px solid #021655
+  font-family: $body-font
+  padding: 10px 0
+  width: 100%
+
+
+.jobs
+  font-size: 1.3em
+  margin-top: 2em
+  transition: background-color 1s linear
+  transition: color 1s linear
+
+.jobs:hover
+  background-color: #4690B3
+  color: #FDEBD3
+
+.trelllo
+  margin-bottom: 2em
+  transition: background-color 1.3s linear
+  transition: color 1.3s linear
+
+.trelllo:hover
+  background-color: $trello-color
+  color: #FDEBD3
+
+.trelllo, .jobs
+  background-color: #DADADA
+  border-radius: 5px
+  font:
+    family: $important-font
+    weight: bold
+  height: 2.5em
+  width: 10em
