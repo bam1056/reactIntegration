@@ -47,12 +47,12 @@ const styles = {
     margin: '10px 0'
   },
   select: {
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-    flexDirection: 'column',
-    border: '1px solid black',
-    padding: '10px 0'
+    // display: 'flex',
+    // alignItems: 'center',
+    // width: '100%',
+    // flexDirection: 'column',
+    // border: '',
+    // padding: '10px 0'
   }
 }
 export default styles

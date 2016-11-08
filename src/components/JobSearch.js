@@ -67,7 +67,7 @@ class JobSearch extends Component {
             <a
               style={styles.apply}
               href={`mailto:antoinette.warren@gmail.com?subject=${subject}&body=${body}`}>
-              Email Toni
+              Email C.D.
             </a>
             <button
               className='jobs'
@@ -82,8 +82,8 @@ class JobSearch extends Component {
     return <div>
       <PageHeader />
       <h1 style={{textAlign: 'center', marginTop: '100px'}}>JOBS</h1> <hr />
-      <div className='Button Container' style={styles.select}>
-        <button className='trello jobs'
+      <div className='Main-Button-Container' style={styles.select}>
+        <button className='trelllo'
           style={styles.authTrelloButton}
           onClick={this.authorize}>
           Authorize Trello
