@@ -14,6 +14,10 @@ $standard-box-shadow: rgba(0, 0, 0, 0.3)
 
 //        ***** Page Styling ******
 
+.h1
+  padding-top: 2em
+  text-align: center
+
 select
   font:
     family: $body-font
@@ -31,7 +35,10 @@ select
   font-family: $body-font
 
 .CardContainer a
-  padding-right: 1em
+  padding: 1em
+
+.CardContainer a:visited
+  color: gray
 
 .CardContainer ul
   background-color: white
@@ -40,8 +47,26 @@ select
   font-family: $body-font
   list-style: none
   margin: 13px
+  padding-left: 0px
+  text-align: center
   width: 275px
   z-index: 20
+
+.CardContainer ul > li:first-child
+  font-size: 19px
+
+.CardContainer ul > li:last-child
+  margin-top: 1em
+
+.CardContainer button
+  font-size: 14px
+  margin-bottom: 10px
+  margin-top: 1.5em
+  width: 15em
+  transition: color 1.7s linear
+
+.CardContainer button:hover
+  color: lighten($trello-color, 18%)
 
 .Main-Button-Container
   display: flex
@@ -51,7 +76,6 @@ select
   font-family: $body-font
   padding: 10px 0
   width: 100%
-
 
 .jobs
   font-size: 1.3em
@@ -80,3 +104,27 @@ select
     weight: bold
   height: 2.5em
   width: 10em
+
+.cards
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+
+.dropdown
+  display: flex
+  align-items: baseline
+  padding-top: 1em
+
+.dropdown label
+  padding-right: .5em
+
+#city, #keyword
+  width: 180px
+  flex-direction: column
+
+#city
+  margin-left: 4em
+
+#keyword
+  margin-left: 2em
