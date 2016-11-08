@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-//import '../styles/style.sass'
+import '../styles/landing-page.css'
 import styles from './styles'
+import '../styles/jobsearch.sass'
 import PageHeader from './PageHeader'
 import PageFooter from './PageFooter'
 
@@ -102,7 +103,7 @@ class JobSearch extends Component {
           <select id='keyword' name='keyword'>
             <option value='Javascript'>Javascript</option>
             <option value='Ruby'>Ruby</option>
-            <option value='FrontEnd'>FrontEnd</option>
+            <option value='FrontEnd'>Front End</option>
             <option value='Junior'>Junior</option>
           </select>
         </div>
