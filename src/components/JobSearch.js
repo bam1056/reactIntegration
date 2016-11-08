@@ -16,6 +16,7 @@ class JobSearch extends Component {
   }
 
   getJobs = () => {
+    this.authorize()
     const city = document.getElementById('city')
     const text = document.getElementById('keyword')
     window.fetch(`http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=${text.value}&city=${city.value}&pgcnt=150`)
@@ -76,13 +77,24 @@ class JobSearch extends Component {
       </div>
     })
     return <div>
-      <PageHeader />
-      <h1 className="h1">JOBS</h1> <hr />
+      <PageHeader navLinks={[{path: '/', name: 'HOME'}, {path: '/config', name: 'CONFIGURE'}]} />
+      <div className='job intro-header'>
+        <div className='job container'>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div className='intro-message'>
+                <h1>JOB SEARCH</h1>
+                <hr className='intro-divider' />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className='Main-Button-Container'>
-        <button className='trelllo'
+        {/* <button className='trelllo'
           onClick={this.authorize}>
           Authorize Trello
-        </button>
+        </button> */}
         <div className='dropdown'>
           <label>City: </label>
           <select id='city' name='city'>

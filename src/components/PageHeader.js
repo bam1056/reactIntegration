@@ -3,6 +3,10 @@ import { Link } from 'react-router'
 
 export default class PageHeader extends Component {
   render () {
+    const { navLinks } = this.props
+    const links =  navLinks === undefined ? <li><Link to='/'>HOME</Link></li> : navLinks.map(link => {
+      return <li key={link.name}><Link to={link.path}>{link.name}</Link></li>
+    })
     return (
       <div>
         <nav className='navbar navbar-default navbar-fixed-top topnav' role='navigation'>
@@ -17,9 +21,7 @@ export default class PageHeader extends Component {
             </div>
             <div className='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
               <ul className='nav navbar-nav navbar-right'>
-                <li>
-                  <Link to='/'>Home</Link>
-                </li>
+                { links }
               </ul>
             </div>
           </div>
