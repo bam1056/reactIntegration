@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-//import '../styles/style.sass'
-import styles from './styles'
+import '../styles/landing-page.css'
+import '../styles/jobsearch.sass'
 import PageHeader from './PageHeader'
 import PageFooter from './PageFooter'
 
@@ -52,25 +52,22 @@ class JobSearch extends Component {
       const subject = 'I Want This Job!!!'
       const body = `Hey Toni! I would really like some help getting this one! Link to my job: ${job.detailUrl}`
       return <div className='CardContainer' key={i}>
-        <ul style={styles.list}>
+        <ul>
           <li>{job.company}</li>
           <li>{job.jobTitle}</li>
           <li>{job.location}</li>
           <li>
             <a
-              style={styles.apply}
               href={job.detailUrl}
               target='_blank'>
               Apply
             </a>
             <a
-              style={styles.apply}
               href={`mailto:antoinette.warren@gmail.com?subject=${subject}&body=${body}`}>
-              Email Toni
+              Email C.D.
             </a>
             <button
               className='jobs'
-              style={styles.cardButton}
               onClick={() => this.makeTrelloCard(job)}>
               Post To Trello
             </button>
@@ -80,14 +77,13 @@ class JobSearch extends Component {
     })
     return <div>
       <PageHeader />
-      <h1 style={{textAlign: 'center', marginTop: '100px'}}>JOBS</h1> <hr />
-      <div className='Button Container' style={styles.select}>
-        <button className='trello jobs'
-          style={styles.authTrelloButton}
+      <h1 className="h1">JOBS</h1> <hr />
+      <div className='Main-Button-Container'>
+        <button className='trelllo'
           onClick={this.authorize}>
           Authorize Trello
         </button>
-        <div style={styles.dropdown}>
+        <div className='dropdown'>
           <label>City: </label>
           <select id='city' name='city'>
             <option value='Saint Petersburg, FL'>St.Pete</option>
@@ -97,23 +93,21 @@ class JobSearch extends Component {
             <option value='New York, NY'>New York</option>
           </select>
         </div>
-        <div style={styles.dropdown}>
+        <div>
           <label>Keywords: </label>
           <select id='keyword' name='keyword'>
             <option value='Javascript'>Javascript</option>
             <option value='Ruby'>Ruby</option>
-            <option value='FrontEnd'>FrontEnd</option>
+            <option value='FrontEnd'>Front End</option>
             <option value='Junior'>Junior</option>
           </select>
         </div>
         <button className='jobs'
-          onClick={this.getJobs}
-          style={styles.authTrelloButton}>
+          onClick={this.getJobs}>
           Get Jobs
         </button>
       </div>
-      <div className="cards"
-        style={styles.listDiv}>
+      <div className="cards">
         {jobList}
       </div>
       <PageFooter />
