@@ -1,6 +1,7 @@
 #The Iron Yard Job Hunt
 
 This project is for Iron Yard graduates ready to start the hunt for their new careers!
+Until config component is done, you will still need to manually input a comment to your campus directors in the makeCard function and uncomment that code to make that happen!
 
 ### What you need to use this project:
 - Trello
@@ -10,8 +11,6 @@ This project is for Iron Yard graduates ready to start the hunt for their new ca
 ### How to get this project started:
 ```
 $ git clone git@github.com:bam1056/reactIntegration.git
-$ npm install webpack-dashboard
-$ npm install html-webpack-plugin
 $ npm install
 $ npm start
 ```
