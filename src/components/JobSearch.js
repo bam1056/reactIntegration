@@ -3,6 +3,7 @@ import '../styles/landing-page.css'
 import '../styles/jobsearch.sass'
 import PageHeader from './PageHeader'
 import PageFooter from './PageFooter'
+import JobSearchService from './JobSearchService'
 
 class JobSearch extends Component {
   constructor () {
@@ -91,36 +92,8 @@ class JobSearch extends Component {
         </div>
       </div>
       <a name='jobSearch' />
-      <div className='Main-Button-Container'>
-        {/* <button className='trelllo'
-          onClick={this.authorize}>
-          Authorize Trello
-        </button> */}
-        <div className='dropdown'>
-          <label>City: </label>
-          <select id='city' name='city'>
-            <option value='Saint Petersburg, FL'>St.Pete</option>
-            <option value='Tampa, FL'>Tampa</option>
-            <option value='Clearwater, FL'>Clearwater</option>
-            <option value='Orlando, FL'>Orlando</option>
-            <option value='New York, NY'>New York</option>
-          </select>
-        </div>
-        <div>
-          <label>Keywords: </label>
-          <select id='keyword' name='keyword'>
-            <option value='Javascript'>Javascript</option>
-            <option value='Ruby'>Ruby</option>
-            <option value='FrontEnd'>Front End</option>
-            <option value='Junior'>Junior</option>
-          </select>
-        </div>
-        <button className='jobs'
-          onClick={this.getJobs}>
-          Get Jobs
-        </button>
-      </div>
-      <div className="cards">
+      <JobSearchService getJobs={this.getJobs} />
+      <div className='cards'>
         {jobList}
       </div>
       <PageFooter />
@@ -129,3 +102,30 @@ class JobSearch extends Component {
 }
 
 export default JobSearch
+
+
+{/* <div className='Main-Button-Container'>
+  <div className='dropdown'>
+    <label>City: </label>
+    <select id='city' name='city'>
+      <option value='Saint Petersburg, FL'>St.Pete</option>
+      <option value='Tampa, FL'>Tampa</option>
+      <option value='Clearwater, FL'>Clearwater</option>
+      <option value='Orlando, FL'>Orlando</option>
+      <option value='New York, NY'>New York</option>
+    </select>
+  </div>
+  <div>
+    <label>Keywords: </label>
+    <select id='keyword' name='keyword'>
+      <option value='Javascript'>Javascript</option>
+      <option value='Ruby'>Ruby</option>
+      <option value='FrontEnd'>Front End</option>
+      <option value='Junior'>Junior</option>
+    </select>
+  </div>
+  <button className='jobs'
+    onClick={this.getJobs}>
+    Get Jobs
+  </button>
+</div> */}
