@@ -77,7 +77,7 @@ class JobSearch extends Component {
       </div>
     })
     return <div>
-      <PageHeader navLinks={[{path: '/', name: 'Home'}, {path: '/config', name: 'Settings'}]} />
+      <PageHeader page='Job Search' navLinks={[{path: '/', name: 'Home'}, {path: '/config', name: 'Settings'}]} />
       <div className='job intro-header'>
         <div className='job container'>
           <div className='row'>

@@ -6,7 +6,7 @@ export default class Configure extends Component {
   render () {
     return (
       <div>
-        <PageHeader navLinks={[{path: '/', name: 'Home'}, {path: '/jobs', name: 'Job Search'}]} />
+        <PageHeader page='Settings' navLinks={[{path: '/', name: 'Home'}, {path: '/jobs', name: 'Job Search'}]} />
         <PageFooter />
       </div>
     )

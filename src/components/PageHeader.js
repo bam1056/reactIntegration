@@ -21,7 +21,7 @@ export default class PageHeader extends Component {
                 <span className='icon-bar' />
                 <span className='icon-bar' />
               </button>
-              <a className='navbar-brand topnav' href='#'>JobSearch</a>
+              <a className='navbar-brand topnav' href='#'>{this.props.page}</a>
             </div>
             <div className='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
               <ul className='nav navbar-nav navbar-right'>
