@@ -83,13 +83,14 @@ class JobSearch extends Component {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='intro-message'>
-                <h1>JOB SEARCH</h1>
+                <h1>Job Search</h1>
                 <hr className='intro-divider' />
               </div>
             </div>
           </div>
         </div>
       </div>
+      <a name='jobSearch' />
       <div className='Main-Button-Container'>
         {/* <button className='trelllo'
           onClick={this.authorize}>
